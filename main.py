@@ -35,3 +35,12 @@ df.set_index('character', inplace=True)
 df = df.transpose()
 
 print(df)
+print(df.describe())
+meantier = df.mean()
+stdtier = df.std()
+desctier = pd.concat([meantier, stdtier], axis=1)
+desctier.columns = ["mean", "std"]
+print(desctier)
+print(desctier.sort_values(by=["mean"]))
+
+sns.pointplot(x="character",)
