@@ -27,9 +27,6 @@ tier_dict = {
     "D":1
     }
 
-#for column in df.columns:
-#    df[column].map(tier_dict)
-
 #df[1].map(tier_dict)
 #print(df.iloc[5,1], type(df.iloc[5,1]))
 
