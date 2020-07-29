@@ -34,5 +34,7 @@ tier_dict = {
 #print(df.iloc[5,1], type(df.iloc[5,1]))
 
 df = df.replace(tier_dict)
+df.set_index('character', inplace=True)
+df = df.transpose()
 
 print(df)
