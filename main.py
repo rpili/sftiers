@@ -42,5 +42,7 @@ desctier = pd.concat([meantier, stdtier], axis=1)
 desctier.columns = ["mean", "std"]
 print(desctier)
 print(desctier.sort_values(by=["mean"]))
-
-sns.pointplot(x="character",)
+# df['characters'] = df.index
+plt.errorbar(desctier.index, desctier["mean"], yerr=desctier["std"], fmt='o')
+plt.scatter(desctier["mean"], desctier["std"])
+plt.show()
